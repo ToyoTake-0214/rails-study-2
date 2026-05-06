@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     @user.tel
     @user.address 
 
+
   end
 
   # GET /users/1/edit
@@ -72,7 +73,7 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :age, :tel, :address)
+      params.require(:user).permit(:name, :age, :tel, :address, :password, :password_confirmation)
     end
 
     def set_index_title
